@@ -17,11 +17,10 @@ export default class Com extends Player {
         //役が成立していない場合
         if(strength === 0){
             //手札のすべてを選択する
-            this.nodes.forEach((node) => {
-                super.selectCard(node));
-            }
+            this.nodes.forEach((node) => super.selectCard(node));
+        }
         //ワンペア、ツーペア、スリーカードが成立しているとき
-        else if (1<= strength <=3){
+        else if (1<= strength && strength<=3){
             //手札のループ
             this.cards.forEach((card,index)=>{
                 //index番目と同じランクのカードの枚数を調べる
@@ -34,5 +33,4 @@ export default class Com extends Player {
                 }
             });
         }
-        };
     }

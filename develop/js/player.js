@@ -2,7 +2,8 @@ import Card from "./card.js";
 
 /playerクラス/
 export default class Player {
-/*プロパティ
+/**プロパティ*/
+
 #cards;
 #nodes;
 
@@ -65,13 +66,13 @@ drawCard(newCard){
     //このノードに書かれたインデックス番号を取得する
     const index = parseInt(node.dataset.index);
     //このノードに書かれた手札の位置を検索する
-    const pos = this.cards.findIndex(card) => card.index === index);
+    const pos = this.cards.findIndex((card) => card.index === index);
     //この手札を複製して退避しておく
     const oldCard = this.cards.slice(pos,pos+1)[0];
     //この手札を新しいカードで置き換える
     this.cards[pos] = newCard;
     //このノードに新しいカードのインデックス番号を書き込む
-    node.dataset.index = newCards.index;
+    node.dataset.index = newCard.index;
     //このノードを未選択の状態に戻す
     node.classList.remove("selected");
     //退避したカードを返す

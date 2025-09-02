@@ -8,7 +8,7 @@ export default class Util {
 }
 
 /*イベントハンドラを追加する */
-    static addEventHandler=(selector,event,handler) => {
+    static addEventListener=(selector,event,handler) => {
     document.querySelectorAll(selector).forEach((e) => e.addEventListener(event,handler));
   }
 
